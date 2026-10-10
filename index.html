@@ -3,154 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5A1730">
     <title>♡ Dla Elizki ♡</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
-<!-- haslo -->
+<!-- Ekran z kodem -->
 <div id="login">
     <div class="login-box">
         <h1>Podaj kod</h1>
-        <input type="text" placeholder="Kod">
-        <button>Odblokuj</button>
-        <p id="podpowiedzi"></p>
+        <input type="text" placeholder="Kod" aria-label="Kod dostępu" autocomplete="off" inputmode="numeric">
+        <button type="button">Odblokuj</button>
+        <p id="podpowiedzi" aria-live="polite"></p>
     </div>
 </div>
 
-<!-- strona glowna -->
+<!-- Strona główna -->
 <main id="strona">
+    <nav aria-label="Nawigacja główna">
+        <a href="#list">List 💌</a>
+        <a href="#czas">O nas ⏳</a>
+        <a href="#galeria">Galeria 📸</a>
+        <a href="#filmy">Filmy 🎥</a>
+    </nav>
 
-<nav>
-    <a href="#list">List 💌</a>
-    <a href="#czas">O nas ⏳</a>
-    <a href="#galeria">Galeria 📸</a>
-    <a href="#filmy">Filmy 🎥</a>
-</nav>
-
-<!-- list -->
-<section id="list">
-    <div class="dekoracje dekoracje-list">
-        <div class="dekoracja dekoracja-list-1"><img src="zdjecia/dekoracje/list1.jpg" alt=""></div>
-        <div class="dekoracja dekoracja-list-2"><img src="zdjecia/dekoracje/list2.jpg" alt=""></div>
-        <div class="dekoracja dekoracja-list-3"><img src="zdjecia/dekoracje/list3.jpg" alt=""></div>
-    </div>
-
-    <div class="list">
-        <h1>WSZYSTKIEGO NAJLEPSZEGO ELIZKA!</h1>
-        <p class="greeting">Dla mojej ukochanej solenizantki,</p>
-        <p>Z okazji Twoich 18. urodzin chciałbym Ci życzyć wszystkiego, co najlepszego może Ci się przydarzyć! Szczęścia w nauce, dużo pieniędzy, jeszcze więcej miłości między nami, powodzenia na maturze i w zdaniu prawa jazdy. No i gratuluję przy okazji wejścia w ten dorosły wiek, haha.
-
-Jestem naprawdę szczęśliwy z tego, że mogłem dla Ciebie trochę pomęczyć się z moimi zdolnościami programistycznymi i stworzyć tę oto piękną stronę. Mam nadzieję, że bardzo Ci się ona podoba.
-
-Jestem z Ciebie mega dumny, że doszłaś do miejsca, w którym teraz jesteś, pomimo tylu trudów i bólu, przez które musiałaś przechodzić. Wierzę, że Twoja siła nigdy nie zniknie i dalej będziesz mogła promienieć tak jak zawsze, moja ślicznotko.
-
-Jeśli chodzi o nas, mam nadzieję, że nasza miłość również nigdy nie osłabnie i będziemy mogli dalej być najlepszą parą na świecie. Kocham to, że mogę dzielić tak wspaniały związek właśnie z Tobą.
-
-Jeżeli zaskoczyłem Cię swoim prezentem, to uwierz, że to dopiero początek niespodzianek, które będę dla Ciebie szykować. Najlepszą częścią dawania Ci prezentów jest dla mnie to, jak bardzo jesteś przez nie szczęśliwa. I serio, to jest moja motywacja, żeby dbać o Twój piękny uśmiech i robić wszystko, żeby nigdy nie gasł.
-
-Z Tobą przeżywam i dalej będę przeżywać najlepsze chwile mojego życia. Dzięki Tobie pewnie nie odwiedziłbym jeszcze Warszawy, nie pojechałbym na tyle niesamowitych koncertów, nie poszerzyłbym swojego gustu muzycznego i oczywiście, nie byłbym tak otwartym człowiekiem, jakim teraz jestem, o czym zresztą zawsze Ci mówię.
-
-Nauczyłaś mnie, jak naprawdę dawać komuś miłość, okazywać czułość i troskę oraz po prostu lepiej żyć z drugą osobą u swojego boku.
-
-Jesteś moją ulubioną osobą na tym świecie i to właśnie z Tobą chcę spędzić resztę życia. Z Tobą chcę pójść na koniec świata i jeszcze dalej...</p>
-        <p class="signature">Kocham Cię z całego serca<br>Twój Grzesiek ❤️</p>
-    </div>
-</section>
-
-<!-- czas -->
-<section id="czas">
-    <div class="dekoracje dekoracje-czas">
-        <div class="dekoracja dekoracja-czas-1"><img src="zdjecia/dekoracje/czas1.jpg" alt=""></div>
-        <div class="dekoracja dekoracja-czas-2"><img src="zdjecia/dekoracje/czas2.jpg" alt=""></div>
-        <div class="dekoracja dekoracja-czas-3"><img src="zdjecia/dekoracje/czas3.jpg" alt=""></div>
-        <div class="dekoracja dekoracja-czas-4"><img src="zdjecia/dekoracje/czas4.jpg" alt=""></div>
-    </div>
-
-    <h1>JESTEŚMY JUŻ RAZEM:</h1>
-    <div id="glownyLicznik">0 lat, 0 miesięcy i 0 dni</div>
-
-    <div class="dokladnyCzas">
-        <div><span id="miesiace">0</span><small>miesiecy</small></div>
-        <div><span id="tygodnie">0</span><small>tygodni</small></div>
-        <div><span id="dni">0</span><small>dni</small></div>
-        <div><span id="godziny">0</span><small>godzin</small></div>
-        <div><span id="minuty">0</span><small>minut</small></div>
-        <div><span id="sekundy">0</span><small>sekund</small></div>
-    </div>
-</section>
-
-<!-- galeria -->
-<section id="galeria">
-    <div class="gwiazda-roku otworz-wspomnienie" data-wspomnienie="gwiazda">
-        <div class="zlotaramka">
-            <img class="ramka-obraz" src="zdjecia/ramka.png" alt="Złota ramka">
-            <img class="gwiazda-zdjecie" src="zdjecia/elizka0.jpg" alt="Elizka">
+    <!-- List -->
+    <section id="list">
+        <div class="dekoracje dekoracje-list" aria-hidden="true">
+            <div class="dekoracja dekoracja-list-1"><img src="zdjecia/dekoracje/list1.jpg" alt=""></div>
+            <div class="dekoracja dekoracja-list-2"><img src="zdjecia/dekoracje/list2.jpg" alt=""></div>
+            <div class="dekoracja dekoracja-list-3"><img src="zdjecia/dekoracje/list3.jpg" alt=""></div>
         </div>
-        <h3>GWIAZDA ROKU 2026</h3>
-    </div>
 
-    <h2>Nasze wspomnienia 📸</h2>
-    <p class="galeria-opis">Kliknij zdjęcie, żeby wrócić ze mną do tego momentu.</p>
+        <div class="list">
+            <h1>WSZYSTKIEGO NAJLEPSZEGO ELIZKA!</h1>
+            <p class="greeting">Dla mojej ukochanej solenizantki,</p>
+            <p>Z okazji Twoich 18. urodzin chciałbym Ci życzyć wszystkiego, co najlepszego może Ci się przydarzyć! Szczęścia w nauce, dużo pieniędzy, jeszcze więcej miłości między nami, powodzenia na maturze i w zdaniu prawa jazdy. No i gratuluję przy okazji wejścia w ten dorosły wiek, haha.</p>
+            <p>Jestem naprawdę szczęśliwy z tego, że mogłem dla Ciebie trochę pomęczyć się z moimi zdolnościami programistycznymi i stworzyć tę oto piękną stronę. Mam nadzieję, że bardzo Ci się ona podoba.</p>
+            <p>Jestem z Ciebie mega dumny, że doszłaś do miejsca, w którym teraz jesteś, pomimo tylu trudów i bólu, przez które musiałaś przechodzić. Wierzę, że Twoja siła nigdy nie zniknie i dalej będziesz mogła promienieć tak jak zawsze, moja ślicznotko.</p>
+            <p>Jeśli chodzi o nas, mam nadzieję, że nasza miłość również nigdy nie osłabnie i będziemy mogli dalej być najlepszą parą na świecie. Kocham to, że mogę dzielić tak wspaniały związek właśnie z Tobą.</p>
+            <p>Jeżeli zaskoczyłem Cię swoim prezentem, to uwierz, że to dopiero początek niespodzianek, które będę dla Ciebie szykować. Najlepszą częścią dawania Ci prezentów jest dla mnie to, jak bardzo jesteś przez nie szczęśliwa. I serio, to jest moja motywacja, żeby dbać o Twój piękny uśmiech i robić wszystko, żeby nigdy nie gasł.</p>
+            <p>Z Tobą przeżywam i dalej będę przeżywać najlepsze chwile mojego życia. Dzięki Tobie pewnie nie odwiedziłbym jeszcze Warszawy, nie pojechałbym na tyle niesamowitych koncertów, nie poszerzyłbym swojego gustu muzycznego i oczywiście, nie byłbym tak otwartym człowiekiem, jakim teraz jestem, o czym zresztą zawsze Ci mówię.</p>
+            <p>Nauczyłaś mnie, jak naprawdę dawać komuś miłość, okazywać czułość i troskę oraz po prostu lepiej żyć z drugą osobą u swojego boku.</p>
+            <p>Jesteś moją ulubioną osobą na tym świecie i to właśnie z Tobą chcę spędzić resztę życia. Z Tobą chcę pójść na koniec świata i jeszcze dalej...</p>
+            <p class="signature">Kocham Cię z całego serca<br>Twój Grzesiek ❤️</p>
+        </div>
+    </section>
 
-    <div class="linka">
-        <div class="polaroid" data-wspomnienie="poczatek"><div class="klamerka"></div><img src="zdjecia/poczatki0.jpg" alt="Początek"><p>Początek ❤️</p></div>
-        <div class="polaroid" data-wspomnienie="koncerty"><div class="klamerka"></div><img src="zdjecia/koncerty0.jpg" alt="Koncerty"><p>Koncerty 🎵</p></div>
-        <div class="polaroid" data-wspomnienie="usa"><div class="klamerka"></div><img src="zdjecia/usa0.jpg" alt="USA"><p>USA 🗽</p></div>
-        <div class="polaroid" data-wspomnienie="podroze"><div class="klamerka"></div><img src="zdjecia/podroze0.jpg" alt="Podróże"><p>Nasze podróże 🚶</p></div>
-        <div class="polaroid" data-wspomnienie="eleganciki"><div class="klamerka"></div><img src="zdjecia/eleganciki0.jpg" alt="Eleganciki"><p>Eleganciki 👨‍💼</p></div>
-        <div class="polaroid" data-wspomnienie="pajace"><div class="klamerka"></div><img src="zdjecia/pajace0.jpg" alt="Pajace"><p>Dwa pajace 😝</p></div>
-    </div>
+    <!-- Licznik związku -->
+    <section id="czas">
+        <div class="dekoracje dekoracje-czas" aria-hidden="true">
+            <div class="dekoracja dekoracja-czas-1"><img src="zdjecia/dekoracje/czas1.jpg" alt=""></div>
+            <div class="dekoracja dekoracja-czas-2"><img src="zdjecia/dekoracje/czas2.jpg" alt=""></div>
+            <div class="dekoracja dekoracja-czas-3"><img src="zdjecia/dekoracje/czas3.jpg" alt=""></div>
+            <div class="dekoracja dekoracja-czas-4"><img src="zdjecia/dekoracje/czas4.jpg" alt=""></div>
+        </div>
 
-    <div id="okno-wspomnienia" class="okno-wspomnienia">
-        <div class="wspomnienie-box">
-            <button id="zamknij-wspomnienie">✕</button>
-            <div class="wspomnienie-tekst">
-                <h2 id="wspomnienie-tytul">Tytuł wspomnienia</h2>
-                <small id="wspomnienie-data">data</small>
-                <p id="wspomnienie-opis">Tutaj będzie Twoja historia.</p>
+        <h1>JESTEŚMY JUŻ RAZEM:</h1>
+        <div id="glownyLicznik">0 lat, 0 miesięcy i 0 dni</div>
+        <div class="dokladnyCzas">
+            <div><span id="miesiace">0</span><small>miesięcy</small></div>
+            <div><span id="tygodnie">0</span><small>tygodni</small></div>
+            <div><span id="dni">0</span><small>dni</small></div>
+            <div><span id="godziny">0</span><small>godzin</small></div>
+            <div><span id="minuty">0</span><small>minut</small></div>
+            <div><span id="sekundy">0</span><small>sekund</small></div>
+        </div>
+    </section>
+
+    <!-- Galeria wspomnień -->
+    <section id="galeria">
+        <div class="gwiazda-roku otworz-wspomnienie" data-wspomnienie="gwiazda" role="button" tabindex="0" aria-label="Otwórz album Gwiazda roku 2026">
+            <div class="zlotaramka">
+                <img class="ramka-obraz" src="zdjecia/ramka.png" alt="Złota ramka">
+                <img class="gwiazda-zdjecie" src="zdjecia/elizka0.jpg" alt="Elizka">
             </div>
-            <div class="wspomnienie-zdjecia" id="wspomnienie-zdjecia"></div>
+            <h3>GWIAZDA ROKU 2026</h3>
         </div>
-    </div>
-</section>
 
-<!-- filmy -->
-<section id="filmy">
-</div>
-    <div class="dekoracje dekoracje-filmy">
-        <div class="dekoracja dekoracja-film-1"><img src="zdjecia/dekoracje/film1.jpg" alt=""></div>
-        <div class="dekoracja dekoracja-film-2"><img src="zdjecia/dekoracje/film2.jpg" alt=""></div>
-        <div class="dekoracja dekoracja-film-3"><img src="zdjecia/dekoracje/film3.jpg" alt=""></div>
-    </div>
+        <h2>Nasze wspomnienia 📸</h2>
+        <p class="galeria-opis">Kliknij zdjęcie, żeby wrócić ze mną do tego momentu.</p>
 
-    <h1>Mała pamiątka z przygotowania Twojego prezentu</h1>
-    <div class="film">
-        <video id="film" controls>
-            <source src="filmiki/filmik.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="przyciski-filmow">
-    <button class="przycisk-film active-film" data-film="filmiki/filmik.mp4">
-        Film główny
-    </button>
+        <div class="linka">
+            <div class="polaroid" data-wspomnienie="poczatek" role="button" tabindex="0"><div class="klamerka"></div><img src="zdjecia/poczatki0.jpg" alt="Początek"><p>Początek ❤️</p></div>
+            <div class="polaroid" data-wspomnienie="koncerty" role="button" tabindex="0"><div class="klamerka"></div><img src="zdjecia/koncerty0.jpg" alt="Koncerty"><p>Koncerty 🎵</p></div>
+            <div class="polaroid" data-wspomnienie="usa" role="button" tabindex="0"><div class="klamerka"></div><img src="zdjecia/usa0.jpg" alt="USA"><p>USA 🗽</p></div>
+            <div class="polaroid" data-wspomnienie="podroze" role="button" tabindex="0"><div class="klamerka"></div><img src="zdjecia/podroze0.jpg" alt="Podróże"><p>Nasze podróże 🚶</p></div>
+            <div class="polaroid" data-wspomnienie="eleganciki" role="button" tabindex="0"><div class="klamerka"></div><img src="zdjecia/eleganciki0.jpg" alt="Eleganciki"><p>Eleganciki 👨‍💼</p></div>
+            <div class="polaroid" data-wspomnienie="pajace" role="button" tabindex="0"><div class="klamerka"></div><img src="zdjecia/pajace0.jpg" alt="Dwa pajace"><p>Dwa pajace 😝</p></div>
+        </div>
 
-    <button class="przycisk-film" data-film="filmiki/bts.mp4">
-        Behind the scenes
-    </button>
+        <div id="okno-wspomnienia" class="okno-wspomnienia" role="dialog" aria-modal="true" aria-labelledby="wspomnienie-tytul">
+            <div class="wspomnienie-box">
+                <button id="zamknij-wspomnienie" type="button" aria-label="Zamknij wspomnienie">✕</button>
+                <div class="wspomnienie-tekst">
+                    <h2 id="wspomnienie-tytul">Tytuł wspomnienia</h2>
+                    <small id="wspomnienie-data">data</small>
+                    <p id="wspomnienie-opis">Tutaj będzie Twoja historia.</p>
+                </div>
+                <div class="wspomnienie-zdjecia" id="wspomnienie-zdjecia"></div>
+            </div>
+        </div>
+    </section>
 
-    <button class="przycisk-film" data-film="filmiki/zyczenia.mp4">
-        Życzenia
-    </button>
-</div>
-</section>
+    <!-- Filmy -->
+    <section id="filmy">
+<div class="dekoracje dekoracje-filmy" aria-hidden="true">
+            <div class="dekoracja dekoracja-film-1"><img src="zdjecia/dekoracje/film1.jpg" alt=""></div>
+            <div class="dekoracja dekoracja-film-2"><img src="zdjecia/dekoracje/film2.jpg" alt=""></div>
+            <div class="dekoracja dekoracja-film-3"><img src="zdjecia/dekoracje/film3.jpg" alt=""></div>
+        </div>
 
+        <h1>Mała pamiątka z przygotowania Twojego prezentu</h1>
+        <div class="film">     
+<iframe
+  id="film-youtube"
+  src="https://www.youtube.com/embed/S0_x1DBmXMQ?playsinline=1&amp;rel=0"
+  title="Film dla Elizki"
+  referrerpolicy="origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+        </div>
+
+        <div class="przyciski-filmow">
+            <button type="button" class="przycisk-film active-film" data-film="S0_x1DBmXMQ">Film główny</button>
+            <button type="button" class="przycisk-film" data-film="EmuJK-cjrgg">Behind the scenes</button>
+            <button type="button" class="przycisk-film" data-film="WoQMLdPr9dE">Życzenia</button>
+        </div>
+    </section>
 </main>
 
-<button id="przycisk-muzyki">🔊</button>
+<button id="przycisk-muzyki" type="button" aria-label="Włącz lub wyłącz muzykę">🔊</button>
 <audio id="muzyka" src="muzyka.mp3" loop preload="auto"></audio>
 <script src="main.js"></script>
-
 </body>
 </html>
