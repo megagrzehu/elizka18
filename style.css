@@ -695,17 +695,34 @@ section h2 {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
-#przycisk-filmu {
-    padding: 12px 25px;
+.przyciski-filmow {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.przycisk-film {
+    padding: 12px 22px;
     border: 1px solid #E8A0B8;
     border-radius: 20px;
     background: transparent;
     color: #FFF4E6;
+    font-family: Georgia, serif;
     font-size: 16px;
     cursor: pointer;
+    transition: transform 0.2s ease,
+                background 0.3s ease,
+                color 0.3s ease;
 }
 
-#przycisk-filmu:hover {
+.przycisk-film:hover {
+    transform: translateY(-2px);
+    background: #E8A0B8;
+    color: #5A1730;
+}
+
+.przycisk-film.active-film {
     background: #E8A0B8;
     color: #5A1730;
 }
