@@ -196,28 +196,26 @@ zakladki.forEach(function(zakladka) {
 
 
 
-/* FILMY YOUTUBE */
 
-const filmYouTube = document.getElementById("film-youtube");
+/* FILMY Z GOOGLE DRIVE */
+const filmDrive = document.getElementById("film-drive");
 const przyciskiFilmow = document.querySelectorAll(".przycisk-film");
 
 przyciskiFilmow.forEach(function(przyciskFilmu) {
     przyciskFilmu.addEventListener("click", function() {
         const idFilmu = przyciskFilmu.dataset.film;
 
-        // Zatrzymaj muzykę w tle, kiedy wybierany jest film.
-        muzyka.pause();
-        przyciskMuzyki.textContent = "🔇";
-
-        // Przeładuj odtwarzacz z wybranym filmem.
-       filmYouTube.src = "https://www.youtube.com/embed/" + idFilmu + "?playsinline=1&rel=0";
+        filmDrive.src =
+            "https://drive.google.com/file/d/" + idFilmu + "/preview";
 
         przyciskiFilmow.forEach(function(przycisk) {
             przycisk.classList.remove("active-film");
         });
+
         przyciskFilmu.classList.add("active-film");
     });
 });
+
 
 /* FILMY ODBLOKOWANE — bez blokady daty */
 
