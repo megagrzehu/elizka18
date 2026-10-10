@@ -60,23 +60,6 @@ input.addEventListener("keydown", function(event) {
 
 });
 
-/* BLOKADA FILMÓW */
-
-const dataOdblokowania = new Date("2026-10-11T00:00:00+02:00");
-const sekcjaFilmow = document.getElementById("filmy");
-
-function sprawdzBlokadeFilmow() {
-    if (new Date() < dataOdblokowania) {
-        sekcjaFilmow.classList.add("zablokowane");
-    } else {
-        sekcjaFilmow.classList.remove("zablokowane");
-    }
-}
-
-sprawdzBlokadeFilmow();
-
-setInterval(sprawdzBlokadeFilmow, 10000);
-
 /* ZAKŁADKI */
 
 const zakladki = document.querySelectorAll("nav a");
@@ -116,30 +99,24 @@ zakladki.forEach(function(zakladka) {
 /* FILMY */
 
 const film = document.getElementById("film");
-const przyciskFilmu = document.getElementById("przycisk-filmu");
+const przyciskiFilmow = document.querySelectorAll(".przycisk-film");
 
-let behindTheScenes = false;
+przyciskiFilmow.forEach(function(przyciskFilmu) {
 
-przyciskFilmu.addEventListener("click", function() {
+    przyciskFilmu.addEventListener("click", function() {
 
-    film.pause();
+        film.pause();
 
-    if (behindTheScenes === false) {
+        film.src = przyciskFilmu.dataset.film;
+        film.load();
 
-        film.src = "filmy/behind.mp4";
-        przyciskFilmu.textContent = "Wróć do filmu";
+        przyciskiFilmow.forEach(function(przycisk) {
+            przycisk.classList.remove("active-film");
+        });
 
-        behindTheScenes = true;
+        przyciskFilmu.classList.add("active-film");
+    });
 
-    } else {
-
-        film.src = "filmy/prezent.mp4";
-        przyciskFilmu.textContent = "Behind the scenes";
-
-        behindTheScenes = false;
-    }
-
-    film.load();
 });
 
 /* LICZNIK CZASU */
@@ -295,10 +272,10 @@ const wspomnienia = {
 
     koncerty: {
         tytul: "Nasze koncerty 🎵",
-        data: "31.10.2025, 16.05.2026",
+        data: "31.10.2025, 14.06.2026, 16.05.2026",
 
         opis:
-            "Bardzo dobrze będe wspominać nasze wspólne koncerty. Przed Matą w Halloween 2025 we Wrocławiu nie byłem jakimś mega napaleńcem na takie eventy, ale podobało mi się to oczywiście, żeby nie było haha, no i pomimo, że nawet nie jestem aż takim fanatykiem maty, to oczywiste, że na początku nie byłem do niego nastawiony. No i w planach miałem na początku wyjść przebrany za Spidermana i nieźle zachlać morde z kolegami na dworze, ale wtedy przychodzi Elizka i mi proponuje zakup biletu i pojechanie z nią, więc to też oczywiste, że w takim razie pojade XD. Ostatecznie ten koncert był niesamowitym doświadczeniem, Mata taki dobry performance odwalił, że musieliśmy pojechać potem w maju na PGE haha. No i ta wyprawa to już w ogóle do końca życia będzie dziwnym wspomnieniem (ale w pozytywnym znaczeniu oczywiście). Że my wytrzymaliśmy tyle godzin w pociągu, męczyli się w kolejce pod stadionem dobrą godzinę, wyskakali się 2 godziny na koncercie i potem jeszcze praktycznie całą noc spędzili na ulicach Warszawy. Pomimo tych wymienionych trudności, jakoś żadna mnie jeszcze ani razu nie zniechęciła do przeżycia takiej historii, ponieważ wiedziałem, że cały czas będziemy razem i oboje doświadczymy tego samego. Nie myślałem nigdy, że mój pierwszy raz w stolicy będzie aż taki zajebisty po prostu. No i jeszcze naszą spontaniczna wyprawa do Lubina pod żabke XD. Jestem pod zajebistym zaskoczeniem, że Okiemu udało się wykręcić taką bibe pod sklepem, niesamowity event. Z tobą znacznie ciekawsze się robią te koncerty, dlatego z niecierpliwością wyczekuje na końcówkę roku, gdzie zaczniemy znowu oglądać razem Harrego Pottera, pojedziemy na jarmark (jeżeli plany wypalą to nawet się uda w Warszawie) no i przeżyjemy dwa kolejne koncerty we Wrocku.", 
+            "Bardzo dobrze będe wspominać nasze wspólne koncerty. Przed Matą w Halloween 2025 we Wrocławiu nie byłem jakimś mega napaleńcem na takie eventy, ale podobało mi się to oczywiście, żeby nie było haha, no i pomimo, że nawet nie jestem aż takim fanatykiem maty, to oczywiste, że na początku nie byłem do niego nastawiony. No i w planach miałem na początku wyjść przebrany za Spidermana i nieźle zachlać morde z kolegami na dworze, ale wtedy przychodzi Elizka i mi proponuje zakup biletu i pojechanie z nią, więc to też oczywiste, że w takim razie pojade XD. Ostatecznie ten koncert był niesamowitym doświadczeniem, Mata taki dobry performance odwalił, że musieliśmy pojechać potem w maju na PGE haha. No i ta wyprawa to już w ogóle do końca życia będzie dziwnym wspomnieniem (ale w pozytywnym znaczeniu oczywiście). Że my wytrzymaliśmy tyle godzin w pociągu, męczyli się w kolejce pod stadionem dobrą godzinę, wyskakali się 2 godziny na koncercie i potem jeszcze praktycznie całą noc spędzili na ulicach Warszawy. Pomimo tych wymienionych trudności, jakoś żadna mnie jeszcze ani razu nie zniechęciła do przeżycia takiej historii, ponieważ wiedziałem, że cały czas będziemy razem i oboje doświadczymy tego samego. Nie myślałem nigdy, że mój pierwszy raz w stolicy będzie aż taki zajebisty po prostu. No i jeszcze naszą spontaniczna wyprawa do Lubina pod żabke XD. Jestem pod zajebistym zaskoczeniem, że Okiemu udało się wykręcić taką bibe pod sklepem, niesamowity event. Z tobą znacznie ciekawsze się robią te koncerty, dlatego z niecierpliwością wyczekuje na końcówkę roku, gdzie zaczniemy znowu oglądać razem Harrego Pottera, pojedziemy na jarmark (jeżeli plany wypalą to nawet się uda w Warszawie) no i przeżyjemy trzy kolejne koncerty we Wrocku.", 
 
         zdjecia: [
             "zdjecia/koncerty1.jpg",
@@ -308,6 +285,10 @@ const wspomnienia = {
             "zdjecia/koncerty5.jpg",
             "zdjecia/koncerty6.jpg",
             "zdjecia/koncerty7.jpg",
+            "zdjecia/koncerty8.jpg",
+            "zdjecia/koncerty9.jpg",
+            "zdjecia/koncerty10.jpg",
+            
         ]
     },
 
@@ -317,7 +298,7 @@ const wspomnienia = {
         data: "Lato 2026",
 
         opis:
-            "Jakbym mógł streścić w jednym zdaniu te 3 tygodnie od końca czerwca do lipca: Najlepsze pierwsze wspólne wakacje z Tobą. Rozumiem i też się z tym zgadzam, że te 3 tygodnie to była ostra przesada, ale patrząc na to, jaką wyprawę przeżyliśmy, uważam, że to była idealna odskocznia od naszego normalnego życia w Polszy. Nawiązałem lepszą relacje z Twoją rodziną, odwiedziłem spory kawał Stanów i to w dodatku z Tobą, no i spróbowałem mnóstwo nowych rzeczy. Najbliższy mojemu sercu zostanie moment, przed wylotem Twoich rodziców, jak zaopiekowaliśmy się naszą ś.p. ptaszyną Kryśką, ponieważ czułem się wtedy, jakbyśmy zostali tymczasowymi rodzicami i po tym naprawdę byłem ciekawy jak w przyszłości nam się będzie powodzić z dzieckiem. Ale poza tym, nigdy nie zapomnę naszych rejsów na Calineczce II, jazd Jeepem, wypraw rowerowych po amerykańskich ulichach czy nawet wspólnych zakupach. Chciałbym, żeby nasze przyszłe wspólne wakacje zawsze miały taki urok, jak akurat te w 2026 (tylko oczywiście nie na tak długo, jak nie ma potrzeby haha).",
+            "Jakbym mógł streścić w jednym zdaniu te 3 tygodnie od końca czerwca do lipca: Najlepsze pierwsze wspólne wakacje z Tobą. Rozumiem i też się z tym zgadzam, że te 3 tygodnie to była ostra przesada, ale patrząc na to, jaką wyprawę przeżyliśmy, uważam, że to była idealna odskocznia od naszego normalnego życia w Polszy. Nawiązałem lepszą relacje z Twoją rodziną, odwiedziłem spory kawał Stanów i to w dodatku z Tobą, no i spróbowałem mnóstwo nowych rzeczy. Najbliższy mojemu sercu zostanie moment, przed wylotem Twoich rodziców, jak zaopiekowaliśmy się naszą ś.p. ptaszyną Kryśką, ponieważ czułem się wtedy, jakbyśmy zostali tymczasowymi rodzicami i po tym naprawdę byłem ciekawy jak w przyszłości nam się będzie powodzić z dzieckiem. Ale poza tym, nigdy nie zapomnę naszych rejsów na Calineczce II, jazd Jeepem, wypraw rowerowych po amerykańskich ulicach czy nawet wspólnych zakupach. Chciałbym, żeby nasze przyszłe wspólne wakacje zawsze miały taki urok, jak akurat te w 2026 (tylko oczywiście nie na tak długo, jak nie ma potrzeby haha).",
 
         zdjecia: [
             "zdjecia/usa1.jpg",
