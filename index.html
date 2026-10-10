@@ -118,12 +118,6 @@ Jesteś moją ulubioną osobą na tym świecie i to właśnie z Tobą chcę spę
 
 <!-- filmy -->
 <section id="filmy">
-    <div id="blokada-filmow">
-    <h1> Jeszcze chwilkę, kochanie! 🔒</h1>
-    <p>
-        Na tę część prezentu musisz jeszcze trochę poczekać.
-        Odblokuje się 11 października o północy.
-    </p>
 </div>
     <div class="dekoracje dekoracje-filmy">
         <div class="dekoracja dekoracja-film-1"><img src="zdjecia/dekoracje/film1.jpg" alt=""></div>
@@ -134,10 +128,22 @@ Jesteś moją ulubioną osobą na tym świecie i to właśnie z Tobą chcę spę
     <h1>Mała pamiątka z przygotowania Twojego prezentu</h1>
     <div class="film">
         <video id="film" controls>
-            <source src="filmy/prezent.mp4" type="video/mp4">
+            <source src="filmiki/filmik.mp4" type="video/mp4">
         </video>
     </div>
-    <button id="przycisk-filmu">Behind the scenes</button>
+    <div class="przyciski-filmow">
+    <button class="przycisk-film active-film" data-film="filmiki/filmik.mp4">
+        Film główny
+    </button>
+
+    <button class="przycisk-film" data-film="filmiki/bts.mp4">
+        Behind the scenes
+    </button>
+
+    <button class="przycisk-film" data-film="filmiki/zyczenia.mp4">
+        Życzenia
+    </button>
+</div>
 </section>
 
 </main>
